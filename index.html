@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>שם המותג | וובינר חינמי לצעירים — נדל"ן מתחת למחיר שוק</title>
+  <meta name="description" content="משדר מיוחד וללא עלות לצעירים עם הון של 150K ומעלה — איך עושים עסקת נדל\"ן ראשונה בכוחות עצמך מתחת למחיר שוק" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style id="user-overrides"></style>
+
+  <style>
+    :root {
+      --bg: #f6f4ed;
+      --bg-section: #ffffff;
+      --dark: #1A2421;
+      --dark-2: #11160f;
+      --blue: #1A2421;
+      --blue-2: #C69C4A;
+      --blue-grad: linear-gradient(135deg, #d4ac5e 0%, #b8893a 100%);
+      --lime: #C69C4A;
+      --green: #C69C4A;
+      --text: #1A2421;
+      --text-dim: #6f7269;
+      --border: #e6e2d6;
+      --card: #ffffff;
+      --danger: #e63946;
+      --shadow: 0 16px 40px rgba(26, 36, 33, 0.12);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { direction: rtl; scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Assistant", -apple-system, "Segoe UI", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    .container { box-sizing: border-box; width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+    h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
+    p, .hero .sub, .sec-sub, .obj-intro, .obj-outro, .obj-warn, .story-text p, .filter-intro,
+    .faq-a, .myth-card p, .value-card p, .final-close-text, .filter-list li > span:last-child,
+    .capacity-note, .form-checkbox span { text-wrap: pretty; }
+
+    /* ====== LOGO BAR ====== */
+    .logo-bar { padding: 16px 0; text-align: center; background: var(--dark); }
+    .logo-bar .logo-text { display: inline-block; font-size: 24px; font-weight: 800; color: #fff; }
+    .logo-bar .logo-text .dot { color: var(--lime); }
+    .logo-bar img { height: 48px; width: auto; display: none; }
+
+    /* ====== HERO ====== */
+    .hero {
+      padding: 40px 0 12px;
+      text-align: center;
+      color: #fff;
+      background: #1A2421;
+      position: relative;
+    }
+    .hero-eyebrow {
+      display: inline-block; font-size: 14px; font-weight: 700; color: var(--dark);
+      background: var(--lime); padding: 7px 18px; border-radius: 999px;
+      margin-bottom: 18px; letter-spacing: 0.01em;
+    }
+    .hero h1 {
+      font-size: clamp(26px, 4.6vw, 50px); font-weight: 800; line-height: 1.12;
+      margin: 0 auto 16px; max-width: 940px;
+      background: transparent !important;
+      color: #ffffff !important;
+    }
+    .hero h1 *:not(.hl-pulse) { background-color: transparent !important; color: #ffffff !important; }
+    .hero h1 .hl-pulse { color: var(--lime) !important; }
+    .hero h1 .hl {
+      background: linear-gradient(180deg, transparent 62%, rgba(198,156,74,0.45) 62%);
+      color: var(--lime);
+    }
+    .hero .sub {
+      font-size: clamp(15px, 2vw, 20px); color: rgba(255,255,255,0.82);
+      max-width: 740px; margin: 0 auto; line-height: 1.5;
+    }
+    .hero .sub strong { color: var(--lime); font-weight: 700; }
+    @media (max-width: 720px) {
+      .hero { padding: 28px 0 12px; }
+      .hero h1 { font-size: 21px; line-height: 1.32; }
+      .hero .sub { font-size: 15px; }
+    }
+
+    /* ====== TIMER BLOCK (separate section, same green bg) ====== */
+    .timer-block { background: #1A2421; padding: 6px 0 24px; }
+    .countdown { display: flex; justify-content: center; gap: clamp(16px, 6vw, 56px); margin-bottom: 0; position: relative; z-index: 2; }
+    .cd-box { text-align: center; }
+    .cd-box .num { font-size: clamp(40px, 7vw, 64px); font-weight: 800; line-height: 1; color: #ffffff; font-variant-numeric: tabular-nums; }
+    .cd-box .unit { font-size: clamp(13px, 1.7vw, 17px); font-weight: 700; color: rgba(255,255,255,0.85); margin-top: 4px; }
+
+    /* ====== SIGNUP BLOCK (form) ====== */
+    .signup-block { padding: 0 0 40px; position: relative; background: #1A2421; }
+
+    /* ====== STATS BLOCK (separate section, holds the divider) ====== */
+    .stats-block { padding: 8px 0 235px; position: relative; background: #1A2421; }
+    .stats-block::before {
+      content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 66px;
+      background: var(--lime);
+      clip-path: polygon(0 100%, 100% 100%, 100% 24%, 0 100%);
+      z-index: 1;
+    }
+    .stats-block::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 58px;
+      background: var(--bg);
+      clip-path: polygon(0 100%, 100% 100%, 100% 34%, 0 100%);
+      z-index: 1;
+    }
+    @media (max-width: 720px) { .signup-block { padding-bottom: 28px; } .stats-block { padding-bottom: 150px; } }
+
+    .signup-card {
+      max-width: 720px; margin: 0 auto; background: #fff;
+      border-radius: 28px; padding: 34px 40px 30px;
+      box-shadow: 0 26px 70px rgba(0,0,0,0.28);
+      position: relative; z-index: 2;
+    }
+    @media (max-width: 720px) { .signup-card { padding: 26px 20px 24px; border-radius: 22px; } }
+    .signup-card h2 { font-size: clamp(20px, 2.8vw, 28px); font-weight: 800; text-align: center; margin-bottom: 8px; color: var(--dark); }
+    .signup-card h2 .point { display: inline-block; margin-right: 4px; }
+    .webinar-date { text-align: center; font-size: clamp(15px, 1.9vw, 18px); font-weight: 600; color: var(--dark); margin-bottom: 22px; }
+
+    .pill-input {
+      width: 100%; padding: 17px 22px; background: #efece2;
+      border: 1px solid transparent; border-radius: 14px; font-size: 16px;
+      color: var(--text); font-family: inherit; direction: rtl; text-align: right;
+      margin-bottom: 12px; transition: border-color .2s, box-shadow .2s, background .2s;
+    }
+    .pill-input::placeholder { color: #9a948a; }
+    .pill-input:focus { outline: none; background: #fff; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(198,156,74,0.14); }
+    .pill-input[type="tel"] { direction: rtl; text-align: right; }
+
+    .form-checkbox { display: flex; gap: 10px; align-items: flex-start; margin: 4px 2px 18px; font-size: 13px; color: var(--text-dim); line-height: 1.45; }
+    .form-checkbox span { flex: 1; text-align: right; }
+    .form-checkbox a { color: var(--text); text-decoration: underline; font-weight: 600; }
+    .form-checkbox input { accent-color: var(--blue); width: 17px; height: 17px; margin-top: 2px; flex-shrink: 0; }
+
+    .submit-btn {
+      width: 100%; font-size: clamp(18px, 2.2vw, 22px); font-weight: 800; color: var(--lime);
+      background: var(--dark); padding: 19px 28px; border-radius: 14px; border: none;
+      cursor: pointer; font-family: inherit;
+      box-shadow: 0 12px 28px rgba(26,36,33,0.30); transition: transform .2s, box-shadow .2s, background .2s;
+    }
+    .submit-btn:hover { transform: translateY(-2px); background: #28332e; box-shadow: 0 16px 38px rgba(26,36,33,0.42); }
+
+    .capacity-note { margin-top: 18px; text-align: center; font-size: 15px; font-weight: 800; color: var(--dark); display: flex; align-items: center; justify-content: center; gap: 9px; }
+    .capacity-note .icon { width: 24px; height: 24px; background: var(--danger); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 900; flex-shrink: 0; }
+
+    /* ====== REPEATED SIGNUP FORM (blends into testimonials bg) ====== */
+    .signup-cta-block { padding: 56px 0 88px; background: #f1efe7; }
+    @media (max-width: 720px) { .signup-cta-block { padding: 40px 0 64px; } }
+
+    /* ====== STATS ROW (white cards on green bg) ====== */
+    .stats-row { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; max-width: 1000px; margin: 0 auto; }
+    @media (max-width: 820px) { .stats-row { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
+    @media (max-width: 460px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+    .stat-card { background: #fff; border-radius: 18px; padding: 36px 14px 28px; text-align: center; box-shadow: 0 18px 44px rgba(0,0,0,0.22); position: relative; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; }
+    .stat-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--lime) 0%, var(--blue-2) 100%); }
+    .stat-card:hover { transform: translateY(-6px); box-shadow: 0 28px 64px rgba(0,0,0,0.32); }
+    .stat-num { font-size: clamp(28px, 3.3vw, 40px); font-weight: 800; line-height: 1.05; direction: ltr; display: inline-block; color: var(--blue); letter-spacing: -0.02em; white-space: nowrap; }
+    .stat-divider { width: 46px; height: 4px; border-radius: 999px; background: var(--lime); margin: 16px auto 15px; }
+    .stat-label { font-size: clamp(16px, 1.9vw, 18px); color: var(--dark); font-weight: 700; line-height: 1.5; }
+
+    /* ====== SECTION HEADINGS ====== */
+    .sec { padding: 52px 0; }
+    @media (max-width: 720px) { .sec { padding: 36px 0; } }
+    .sec-title { font-size: clamp(24px, 3.8vw, 38px); font-weight: 800; text-align: center; margin-bottom: 10px; }
+    .sec-sub { text-align: center; color: var(--text-dim); max-width: 680px; margin: 0 auto 34px; font-size: 17px; }
+
+    /* ====== ELEGANT SECTION DIVIDER ====== */
+    .sec-divider { display: flex; align-items: center; justify-content: center; padding: 34px 20px; background: linear-gradient(180deg, #ffffff 0%, #f1efe7 100%); }
+    .sec-divider .line { width: 100%; max-width: 680px; display: flex; align-items: center; gap: 18px; }
+    .sec-divider .line::before, .sec-divider .line::after { content: ""; height: 1px; flex: 1; background: linear-gradient(90deg, transparent 0%, #e0dac9 50%, transparent 100%); }
+    .sec-divider .dot { width: 11px; height: 11px; transform: rotate(45deg); flex-shrink: 0; background: var(--lime); box-shadow: 0 0 0 6px rgba(198,156,74,0.22); }
+    @media (max-width: 720px) { .sec-divider { padding: 24px 20px; } }
+
+    /* ====== VALUE BLOCK ====== */
+    .value-block { background: var(--bg-section); }
+    .value-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; max-width: 840px; margin: 0 auto; }
+    @media (max-width: 720px) { .value-grid { grid-template-columns: 1fr; } .value-card { aspect-ratio: auto; } }
+    .value-card { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 12px; padding: 26px 24px; background: #1A2421; border: 1px solid rgba(255,255,255,0.16); border-radius: 16px; aspect-ratio: 1.5 / 1; transition: transform .2s, border-color .2s, box-shadow .2s; }
+    .value-card:hover { transform: translateY(-4px); border-color: var(--lime); box-shadow: 0 16px 40px rgba(0,0,0,0.35); }
+    .value-card .ic { color: var(--lime); display: flex; align-items: center; justify-content: center; margin-bottom: 2px; }
+    .value-card .ic svg { width: 56px; height: 56px; display: block; }
+    .value-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; color: var(--lime); }
+    .value-card p { font-size: 15.5px; color: rgba(255,255,255,0.85); line-height: 1.6; }
+
+    /* ====== PROOF / TESTIMONIALS (metric cards with photos) ====== */
+    .proof-block { background: #f1efe7; }
+    .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; max-width: 1100px; margin: 0 auto; }
+    @media (max-width: 980px) { .proof-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .proof-grid { grid-template-columns: 1fr; } }
+    .tcard { background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 22px 20px; box-shadow: var(--shadow); }
+    .tcard-img { width: 100%; aspect-ratio: 1 / 1; border-radius: 12px; overflow: hidden; margin-bottom: 16px; background: #ece8de; }
+    .tcard-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .tcard-head { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 16px; }
+    .tcard-name { font-size: 16px; font-weight: 800; color: #4b994e !important; text-align: center; width: 100%; }
+    .tcard-row { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px dashed var(--border); font-size: 14.5px; }
+    .tcard-row:last-of-type { border-bottom: none; }
+    .tcard-row .lbl { color: var(--text-dim); }
+    .tcard-row .val { font-weight: 800; color: var(--dark); }
+    .tcard-row.net .val { color: var(--green); }
+    .tcard-quote { margin-top: 14px; font-size: 14px; color: var(--text-dim); font-style: italic; line-height: 1.5; }
+
+    /* ====== STORY BLOCK (דור) ====== */
+    .story-block { background: var(--dark); color: #fff; }
+    .story-wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; max-width: 1080px; margin: 0 auto; }
+    @media (max-width: 820px) { .story-wrap { grid-template-columns: 1fr; gap: 30px; } .story-photo { order: 2; } }
+    .story-photo { display: flex; justify-content: center; }
+    .story-photo-circle { width: 100%; max-width: 400px; aspect-ratio: 1 / 1; border-radius: 50%; overflow: hidden; background: var(--lime); border: 6px solid var(--lime); box-shadow: 0 24px 60px rgba(0,0,0,0.45); }
+    .story-photo-circle img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 8%; display: block; }
+    .story-title { font-size: clamp(28px, 4vw, 44px); font-weight: 800; color: var(--lime); line-height: 1.15; margin-bottom: 22px; }
+    .story-text p { color: rgba(255,255,255,0.85); margin-bottom: 16px; font-size: clamp(17px, 1.5vw, 19.5px); line-height: 1.7; }
+    .story-text .hl-green { color: var(--lime); font-weight: 800; }
+    .story-text .hl-red { color: #ff6b6b; font-weight: 800; }
+    .story-closing { font-size: clamp(19px, 2.4vw, 24px); font-weight: 800; color: #fff; margin-top: 10px; }
+
+    /* ====== OBJECTIONS (myth question cards) ====== */
+    .objection-block { background: var(--bg); }
+    .obj-intro { text-align: center; color: #111111; max-width: 700px; margin: 0 auto 46px; font-size: 17px; line-height: 1.55; }
+    .obj-intro strong { display: block; margin-top: 10px; color: #111111; font-weight: 800; font-size: 19px; }
+    .myth-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 1000px; margin: 0 auto; }
+    @media (max-width: 768px) { .myth-grid { grid-template-columns: 1fr; gap: 48px; } }
+    .myth-card { position: relative; background: var(--dark); color: #fff; border-radius: 14px; padding: 46px 26px 30px; text-align: center; }
+    .myth-badge { position: absolute; top: -24px; left: 50%; transform: translateX(-50%); width: 50px; height: 50px; border-radius: 50%; background: #fff; color: var(--dark); display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 800; box-shadow: 0 8px 18px rgba(26,36,33,0.25); }
+    .myth-card p { font-size: 17px; line-height: 1.55; font-weight: 600; color: rgba(255,255,255,0.92); }
+    .myth-card p strong { color: #fff; font-weight: 800; }
+    .obj-outro { text-align: center; font-weight: 800; color: var(--dark); font-size: 19px; max-width: 640px; margin: 46px auto 12px; line-height: 1.5; }
+    .obj-warn { text-align: center; font-weight: 800; color: var(--danger); font-size: 18px; }
+
+    /* ====== FILTER (who is it for — dark) ====== */
+    .filter-block { background: var(--dark); color: #fff; }
+    .filter-block .sec-title { color: var(--lime); }
+    .filter-intro { text-align: center; max-width: 740px; margin: 0 auto 44px; color: rgba(255,255,255,0.8); font-size: 16.5px; line-height: 1.6; }
+    .filter-intro .lead { display: block; color: #fff; font-weight: 800; font-size: 19px; margin-bottom: 16px; }
+    .filter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1060px; margin: 0 auto; align-items: start; }
+    @media (max-width: 820px) { .filter-grid { grid-template-columns: 1fr; gap: 34px; } }
+    .filter-col-head { text-align: center; font-size: 18px; font-weight: 800; margin-bottom: 18px; line-height: 1.4; }
+    .filter-col.no .filter-col-head { color: #ff6b6b; }
+    .filter-col.yes .filter-col-head { color: #fff; }
+    .filter-card { background: #fff; border-radius: 16px; padding: 10px 26px; box-shadow: 0 16px 40px rgba(0,0,0,0.25); }
+    .filter-list { list-style: none; }
+    .filter-list li { display: flex; gap: 14px; align-items: center; padding: 16px 0; border-bottom: 1px solid #efece2; }
+    .filter-list li:last-child { border-bottom: none; }
+    .filter-list li > span:last-child { flex: 1; text-align: right; font-size: 16px; line-height: 1.5; color: var(--text); }
+    .filter-list .ic { flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .filter-col.no .ic { width: 26px; height: 26px; border-radius: 6px; background: var(--danger); color: #fff; font-weight: 900; font-size: 14px; }
+    .filter-col.yes .ic { color: var(--lime); font-weight: 900; font-size: 24px; }
+    .filter-cta { text-align: center; margin-top: 46px; }
+
+    /* ====== FAQ ====== */
+    .faq-block { background: var(--bg); }
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 12px; overflow: hidden; }
+    .faq-q { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 18px 22px; cursor: pointer; font-size: 17px; font-weight: 700; color: var(--dark); }
+    .faq-q .chev { flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--lime); color: var(--dark); display: flex; align-items: center; justify-content: center; font-weight: 900; transition: transform .25s; }
+    .faq-item.open .faq-q .chev { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease; padding: 0 22px; color: var(--text-dim); font-size: 17px; line-height: 1.65; }
+    .faq-item.open .faq-a { max-height: 360px; padding: 0 22px 20px; }
+
+    /* ====== CTA / BUTTONS ====== */
+    .cta-btn { display: inline-block; font-size: 19px; font-weight: 800; color: var(--blue); background: #fff; padding: 18px 44px; border-radius: 12px; text-decoration: none; box-shadow: 0 12px 30px rgba(0,0,0,0.18); transition: transform .2s, box-shadow .2s; border: none; cursor: pointer; font-family: inherit; }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 18px 42px rgba(0,0,0,0.28); }
+    .cta-btn.lime { background: var(--lime); color: var(--dark); }
+    .cta-btn .circ { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border: 2px solid currentColor; border-radius: 50%; margin-right: 8px; font-size: 13px; line-height: 1; vertical-align: middle; }
+
+    /* ====== FAQ CLOSING CTA (dark band) ====== */
+    .faq-cta { background: var(--dark); color: #fff; text-align: center; padding: 50px 0 58px; }
+    .faq-cta p { font-weight: 800; font-size: clamp(18px, 2.4vw, 23px); line-height: 1.5; margin-bottom: 26px; }
+    @media (max-width: 720px) { .faq-cta { padding: 36px 0 44px; } }
+
+    /* ====== FINAL CLOSING + FORM ====== */
+    .final-close { background: var(--bg); padding: 64px 0 74px; text-align: center; }
+    @media (max-width: 720px) { .final-close { padding: 44px 0 56px; } }
+    .final-close-title { font-size: clamp(30px, 5vw, 48px); font-weight: 800; color: var(--dark); margin-bottom: 18px; }
+    .final-close-text { max-width: 620px; margin: 0 auto 22px; color: var(--text-dim); font-size: 17px; line-height: 1.6; }
+    .final-close-bold { font-weight: 800; color: var(--dark); font-size: 18px; margin-bottom: 34px; }
+
+    /* ====== FOOTER ====== */
+    footer { padding: 30px 0; text-align: center; color: var(--text-dim); font-size: 13px; background: var(--dark-2); }
+    footer .container { color: rgba(255,255,255,0.6); }
+    footer a { color: rgba(255,255,255,0.75); text-decoration: underline; }
+
+    a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+
+    /* ====== STICKY CTA + MODAL ====== */
+    .sticky-cta { position: fixed; z-index: 9000; direction: rtl; }
+    @media (max-width: 720px) {
+      .sticky-cta { bottom: 0; left: 0; right: 0; padding: 12px 14px calc(12px + env(safe-area-inset-bottom)); background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-top: 1px solid var(--border); }
+      .sticky-cta button { width: 100%; }
+    }
+    @media (min-width: 721px) { .sticky-cta { bottom: 22px; left: 22px; } }
+    .sticky-cta button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      font-size: 17px; font-weight: 800; color: var(--dark); background: var(--blue-grad);
+      padding: 15px 26px; border-radius: 999px; border: none; cursor: pointer; font-family: inherit;
+      box-shadow: 0 12px 32px rgba(26,36,33,0.35); transition: transform .18s, box-shadow .18s;
+    }
+    .sticky-cta button:hover { transform: translateY(-2px); box-shadow: 0 16px 44px rgba(26,36,33,0.5); }
+
+    .modal-overlay { position: fixed; inset: 0; z-index: 9500; background: rgba(1,53,59,0.6); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; padding: 20px; direction: rtl; animation: modalFade .22s ease; }
+    .modal-overlay.open { display: flex; }
+    @keyframes modalFade { from { opacity: 0; } to { opacity: 1; } }
+    .modal-card { position: relative; width: 100%; max-width: 460px; background: #fff; border-radius: 20px; padding: 32px 28px 26px; box-shadow: 0 30px 80px rgba(0,0,0,0.4); animation: modalSlide .28s cubic-bezier(.2,.9,.3,1.1); }
+    @keyframes modalSlide { from { transform: translateY(20px) scale(.96); opacity: 0; } to { transform: translateY(0) scale(1); opacity: 1; } }
+    .modal-close { position: absolute; top: 12px; left: 12px; width: 32px; height: 32px; border: none; background: #efece2; color: var(--dark); border-radius: 50%; font-size: 18px; font-weight: 700; cursor: pointer; font-family: inherit; line-height: 1; }
+    .modal-close:hover { background: #ddd6c8; }
+    .modal-card h2 { font-size: 22px; font-weight: 800; text-align: center; margin-bottom: 6px; color: var(--dark); }
+    .modal-card .modal-sub { text-align: center; font-size: 14px; color: var(--text-dim); margin-bottom: 18px; }
+    .modal-card .form-row { margin-bottom: 12px; }
+    .modal-card .submit-btn { margin-top: 4px; }
+
+    @media (max-width: 720px) { footer { padding-bottom: 90px; } }
+
+    /* ====== INLINE TEXT EDITOR ====== */
+    #edit-toolbar { position: fixed; top: 14px; left: 14px; z-index: 9999; display: flex; gap: 8px; direction: rtl; flex-wrap: wrap; max-width: calc(100vw - 28px); }
+    #edit-toolbar button { background: rgba(26,36,33,0.94); color: #fff; border: 1px solid rgba(255,255,255,0.25); padding: 9px 15px; border-radius: 10px; cursor: pointer; font-family: inherit; font-size: 13.5px; font-weight: 700; backdrop-filter: blur(10px); transition: background .2s, color .2s; }
+    #edit-toolbar button:hover { background: var(--blue-2); color: var(--dark); border-color: var(--blue-2); }
+    #edit-toolbar #save-btn, #edit-toolbar #reset-btn, #edit-toolbar #spacing-btn, #edit-toolbar #visibility-btn { display: none; }
+    body.editing #edit-toolbar #save-btn, body.editing #edit-toolbar #reset-btn,
+    body.editing #edit-toolbar #spacing-btn, body.editing #edit-toolbar #visibility-btn { display: inline-block; }
+    body.editing #edit-toolbar #edit-toggle { background: var(--blue-2); color: var(--dark); }
+    #edit-toolbar #reset-btn { background: rgba(230,57,70,0.15); border-color: rgba(230,57,70,0.5); color: #ffb3b9; }
+    #edit-toolbar #reset-btn:hover { background: var(--danger); color: #fff; border-color: var(--danger); }
+    body.editing #edit-toolbar #spacing-btn.active, body.editing #edit-toolbar #visibility-btn.active { background: var(--blue-2); color: var(--dark); border-color: var(--blue-2); }
+
+    body.editing [contenteditable="true"] { outline: 1px dashed rgba(198,156,74,0.5); outline-offset: 4px; border-radius: 4px; cursor: text; transition: outline-color .15s, background .15s; }
+    body.editing [contenteditable="true"]:hover { outline-color: var(--blue-2); background: rgba(198,156,74,0.05); }
+    body.editing [contenteditable="true"]:focus { outline: 2px solid var(--blue-2); background: rgba(198,156,74,0.08); }
+
+    #spacing-panel, #visibility-panel { position: fixed; top: 64px; left: 14px; z-index: 9998; width: 300px; max-width: calc(100vw - 28px); background: rgba(26,36,33,0.97); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,0.2); border-radius: 14px; padding: 18px; direction: rtl; display: none; box-shadow: 0 14px 40px rgba(0,0,0,0.5); max-height: calc(100vh - 80px); overflow-y: auto; }
+    #spacing-panel.open, #visibility-panel.open { display: block; }
+    #spacing-panel h3, #visibility-panel h3 { font-size: 14px; font-weight: 800; color: var(--lime); margin-bottom: 14px; }
+    .spacing-control { margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .spacing-control-title { font-size: 13.5px; font-weight: 800; color: var(--lime); margin-bottom: 10px; }
+    .spacing-control:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .spacing-control-label { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #fff; margin-bottom: 8px; font-weight: 600; }
+    .spacing-control-label .val { color: var(--lime); font-weight: 700; font-variant-numeric: tabular-nums; min-width: 42px; text-align: left; }
+    .spacing-control input[type="range"] { width: 100%; accent-color: var(--lime); cursor: pointer; }
+    .visibility-row { display: flex; justify-content: space-between; align-items: center; padding: 11px 14px; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); margin-bottom: 8px; font-size: 13.5px; color: #fff; font-weight: 600; }
+    .visibility-row:last-child { margin-bottom: 0; }
+    .visibility-row.off { opacity: 0.45; }
+    .visibility-row .vis-toggle { position: relative; width: 40px; height: 22px; background: #3a4a4a; border-radius: 999px; cursor: pointer; transition: background .2s; flex-shrink: 0; border: none; padding: 0; }
+    .visibility-row .vis-toggle::after { content: ""; position: absolute; top: 2px; right: 2px; width: 18px; height: 18px; background: #fff; border-radius: 50%; transition: transform .2s; }
+    .visibility-row .vis-toggle.on { background: var(--lime); }
+    .visibility-row .vis-toggle.on::after { transform: translateX(-18px); }
+
+    #autosave-indicator { position: fixed; bottom: 14px; left: 14px; z-index: 9998; background: var(--dark); color: #fff; padding: 8px 16px; border-radius: 999px; font-size: 12.5px; font-weight: 700; box-shadow: 0 4px 16px rgba(0,0,0,0.4); display: none; align-items: center; gap: 8px; }
+    #autosave-indicator.show { display: inline-flex; }
+    #autosave-indicator::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--lime); }
+
+    /* ====== MOBILE RESPONSIVE REFINEMENT (≤768) ====== */
+    @media (max-width: 768px) {
+      .sec { padding: 44px 0; }
+      .sec-title { line-height: 1.25; margin-bottom: 8px; }
+      .sec-sub { font-size: 15px; margin-bottom: 24px; line-height: 1.55; }
+      .value-card p, .myth-card p { font-size: 15.5px; line-height: 1.6; }
+      .filter-list li > span:last-child { font-size: 15.5px; line-height: 1.5; }
+      .filter-col-head { font-size: 17px; }
+      .tcard-row { font-size: 14px; }
+      .obj-outro { font-size: 17px; }
+      .obj-intro { font-size: 16px; margin-bottom: 36px; }
+      .submit-btn { font-size: 18px; padding: 17px 24px; }
+      .cta-btn { font-size: 17px; padding: 16px 32px; }
+      .signup-card { border-radius: 20px; }
+      .proof-grid, .value-grid, .filter-grid { gap: 16px; }
+    }
+
+    /* ====== MOBILE POLISH ====== */
+    @media (max-width: 480px) {
+      .container { padding: 0 18px; }
+      .countdown { gap: 12px; }
+      .cd-box .num { font-size: 36px; }
+      .cd-box .unit { font-size: 12px; }
+
+      /* HERO — compact, proportioned (ref 5) */
+      .hero { padding: 26px 0 16px; overflow: hidden; }
+      .hero-eyebrow { font-size: 11px; padding: 7px 15px; line-height: 1.45; margin: 0 auto 16px; max-width: min(100%, 340px); white-space: normal; overflow-wrap: anywhere; }
+      .hero h1 { font-size: 21px; line-height: 1.3; margin: 0 auto 13px; max-width: min(100%, 340px) !important; text-wrap: wrap; white-space: normal; overflow-wrap: anywhere; }
+      .hero .sub { font-size: 14.5px; line-height: 1.55; margin: 0 auto; max-width: min(100%, 350px); }
+
+      /* STATS — clean 2-col grid (ref 6) */
+      .stats-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .stat-card { padding: 22px 10px 18px; border-radius: 14px; box-shadow: 0 8px 22px rgba(0,0,0,0.16); }
+      .stat-num { font-size: 29px; }
+      .stat-divider { width: 34px; margin: 10px auto 9px; }
+      .stat-label { font-size: 13px; line-height: 1.4; }
+
+      .signup-card { padding: 22px 16px 20px; }
+      .pill-input { padding: 15px 18px; }
+      .value-card { padding: 28px 20px; }
+      .myth-card { padding: 42px 22px 26px; }
+      .filter-card { padding: 8px 18px; }
+      .sticky-cta button { font-size: 16px; padding: 14px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====== LOGO BAR ====== -->
+  <div class="logo-bar" id="top">
+    <img src="logo.png" alt="שם המותג" />
+    <span class="logo-text">שם<span class="dot"> המותג</span></span>
+  </div>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">בחינם: משדר מיוחד לצעירים עם הון של 150K ומעלה שרוצים להגדיל את ההון שלהם באמצעות נדל"ן</div>
+      <h1>השיטה הסודית נחשפת: איך צעירים עושים בכוחות עצמם את עסקת הנדל"ן הראשונה שלהם מתחת למחיר שוק ומרוויחים מאות אלפי שקלים</h1>
+      <p class="sub">בלי לשלם עשרות אלפי שקלים למתווכים ולמלווי משקיעים<br><strong>*החל מ- 150K הון עצמי בלבד</strong></p>
+    </div>
+  </section>
+
+  <!-- ====== TIMER BLOCK ====== -->
+  <section class="timer-block">
+    <div class="container">
+      <div class="countdown" id="countdown">
+        <div class="cd-box"><div class="num" data-cd="seconds">00</div><div class="unit">שניות</div></div>
+        <div class="cd-box"><div class="num" data-cd="minutes">00</div><div class="unit">דקות</div></div>
+        <div class="cd-box"><div class="num" data-cd="hours">00</div><div class="unit">שעות</div></div>
+        <div class="cd-box"><div class="num" data-cd="days">00</div><div class="unit">ימים</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SIGNUP BLOCK (form) ====== -->
+  <section class="signup-block" id="form">
+    <div class="container">
+      <div class="signup-card">
+        <h2><span class="point">👆</span> להרשמה לוובינר הקרוב בחינם</h2>
+        <div class="webinar-date">יום ראשון | 28/06/26 | בשעה 19:00</div>
+        <form action="#" method="post" onsubmit="event.preventDefault(); alert('תודה! נרשמת בהצלחה לוובינר.'); this.reset();">
+          <input class="pill-input" type="text" name="name" required autocomplete="name" placeholder="איך קוראים לך?" aria-label="שם מלא" />
+          <input class="pill-input" type="tel" name="phone" required autocomplete="tel" placeholder="מה המספר שלך?" aria-label="טלפון" />
+          <input class="pill-input" type="email" name="email" required autocomplete="email" placeholder="מה המייל שלך?" aria-label="אימייל" />
+          <label class="form-checkbox">
+            <span>אני מאשר/ת שקראתי ואני מסכים/ה <a href="#" onclick="event.preventDefault();">לתקנון האתר</a> וכן לקבל תזכורות לגבי הוובינר ותוכן שיווקי בוואטסאפ ובמייל</span>
+            <input type="checkbox" required />
+          </label>
+          <button type="submit" class="submit-btn">שריין מקום בהדרכה בחינם</button>
+          <div class="capacity-note"><span class="icon">!</span><span>מס׳ המקומות מוגבל ל-250 אנשים</span></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== STATS BLOCK ====== -->
+  <section class="stats-block">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-card"><div class="stat-num">1500+</div><div class="stat-divider"></div><div class="stat-label">עסקאות נדלן מוצלחות</div></div>
+        <div class="stat-card"><div class="stat-num">12</div><div class="stat-divider"></div><div class="stat-label">שנות ניסיון בעולם הנדל"ן</div></div>
+        <div class="stat-card"><div class="stat-num">100~300K</div><div class="stat-divider"></div><div class="stat-label">פוטנציאל רווח של מאות אלפי שקלים בקניית דירה מתחת למחיר שוק</div></div>
+        <div class="stat-card"><div class="stat-num">0₪</div><div class="stat-divider"></div><div class="stat-label">בוובינר תגלה בחינם לגמרי איך גם אתה יכול לקנות נדלן מתחת למחיר שוק ולהרוויח הון</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== VALUE BLOCK ====== -->
+  <section class="sec value-block">
+    <div class="container">
+      <h2 class="sec-title">מה תגלו בוובינר?</h2>
+      <p class="sec-sub">תת-כותרת קצרה שמסכמת את הערך של הוובינר</p>
+      <div class="value-grid">
+        <div class="value-card">
+          <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 32 18 20 26 28 42 12"></polyline><polyline points="42 22 42 12 32 12"></polyline></svg></div>
+          <div><h3>איך לעשות עסקת נדל"ן רווחית</h3><p>נדל"ן זה לא משחק וכדי לעשות עסקה חכמה חייב להכיר את "חוקי המשחק". אחשוף איך תוכל לבצע עסקת נדל"ן בצורה בטוחה ושתגדיל לך את ההון משמעותית בתוך זמן קצר.</p></div>
+        </div>
+        <div class="value-card">
+          <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="21" cy="21" r="13"></circle><line x1="40" y1="40" x2="30.5" y2="30.5"></line></svg></div>
+          <div><h3>איתור עסקאות מתפוצצות</h3><p>לא כל עסקת נדל"ן היא רווחית ונכונה עבורך. תגלה איך לאתר ולזהות עסקאות מעולות שאחרים לא יודעים למצוא.</p></div>
+        </div>
+        <div class="value-card">
+          <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="13" width="34" height="24" rx="4"></rect><path d="M7 21h34"></path><circle cx="33" cy="29" r="2.2" fill="currentColor" stroke="none"></circle></svg></div>
+          <div><h3>כיצד להיפטר ממתווכים ומלווי משקיעים</h3><p>מתווכים ומלווי משקיעים גוזרים עשרות אלפי שקלים בכל עסקה שתבצע. בסוף המשדר תדע איך לעשות את עסקת הנדל"ן הראשונה שלך בכוחות עצמך ולחסוך הון.</p></div>
+        </div>
+        <div class="value-card">
+          <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 42V11a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v31"></path><path d="M26 42V21h9a2 2 0 0 1 2 2v19"></path><line x1="16" y1="16" x2="21" y2="16"></line><line x1="16" y1="23" x2="21" y2="23"></line><line x1="16" y1="30" x2="21" y2="30"></line><line x1="31" y1="28" x2="33" y2="28"></line><line x1="31" y1="34" x2="33" y2="34"></line><line x1="7" y1="42" x2="41" y2="42"></line></svg></div>
+          <div><h3>למה דירה להשקעה היא "המסלול הבטוח" להגדלת ההון שלך</h3><p>לנדל"ן יש מינוף ונדל"ן יכול להכפיל את ההון העצמי שלך בזמן די קצר (אם עושים הכל בצורה נכונה). הדרך המדויקת להגדיל את ההון העצמי שלך באמצעות עסקת נדל"ן ראשונה.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SECTION DIVIDER ====== -->
+  <div class="sec-divider"><div class="line"><span class="dot"></span></div></div>
+
+  <!-- ====== PROOF / TESTIMONIALS ====== -->
+  <section class="sec proof-block">
+    <div class="container">
+      <h2 class="sec-title">אלו עסקאות נדל"ן שצעירים ביצעו בעצמם והרוויחו מאות אלפי שקלים</h2>
+      <p class="sec-sub">תוצאות אמיתיות של לקוחות — לעריכה</p>
+      <div class="proof-grid">
+        <div class="tcard">
+          <div class="tcard-img"><img src="images/yad-vashem.jpg" alt="עסקת יד ושם, באר שבע" loading="lazy" decoding="async" /></div>
+          <div class="tcard-head"><div class="tcard-name">רווח של 278,000</div></div>
+          <div class="tcard-row"><span class="lbl">מחיר קנייה</span><span class="val">618,000</span></div>
+          <div class="tcard-row"><span class="lbl">מחיר עדכני</span><span class="val">900,000</span></div>
+          <div class="tcard-row"><span class="lbl">תקופה</span><span class="val">12 חודשים</span></div>
+          <div class="tcard-row net"><span class="lbl">רווח נטו</span><span class="val">₪278,000</span></div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-img"><img src="images/bnei-or.jpg" alt="עסקת בני אור, באר שבע" loading="lazy" decoding="async" /></div>
+          <div class="tcard-head"><div class="tcard-name">רווח של 380,000</div></div>
+          <div class="tcard-row"><span class="lbl">מחיר קנייה</span><span class="val">620,000</span></div>
+          <div class="tcard-row"><span class="lbl">מחיר עדכני</span><span class="val">1,000,000</span></div>
+          <div class="tcard-row"><span class="lbl">תקופה</span><span class="val">48 חודשים</span></div>
+          <div class="tcard-row net"><span class="lbl">רווח נטו</span><span class="val">₪380,000</span></div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-img"><img src="images/tchernichovsky.jpg" alt="עסקת טשרניחובסקי, באר שבע" loading="lazy" decoding="async" /></div>
+          <div class="tcard-head"><div class="tcard-name">רווח של 330,000</div></div>
+          <div class="tcard-row"><span class="lbl">מחיר קנייה</span><span class="val">800,000</span></div>
+          <div class="tcard-row"><span class="lbl">מחיר עדכני</span><span class="val">1,100,000</span></div>
+          <div class="tcard-row"><span class="lbl">תקופה</span><span class="val">42 חודשים</span></div>
+          <div class="tcard-row net"><span class="lbl">רווח נטו</span><span class="val">₪330,000</span></div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-img"><img src="images/kotel-maaravi.jpg" alt="עסקת הכותל המערבי, באר שבע" loading="lazy" decoding="async" /></div>
+          <div class="tcard-head"><div class="tcard-name">רווח של 260,000</div></div>
+          <div class="tcard-row"><span class="lbl">מחיר קנייה</span><span class="val">520,000</span></div>
+          <div class="tcard-row"><span class="lbl">מחיר עדכני</span><span class="val">780,000</span></div>
+          <div class="tcard-row"><span class="lbl">תקופה</span><span class="val">12 חודשים</span></div>
+          <div class="tcard-row net"><span class="lbl">רווח נטו</span><span class="val">₪260,000</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== REPEATED SIGNUP FORM ====== -->
+  <section class="signup-cta-block" id="form2">
+    <div class="container">
+      <div class="signup-card">
+        <h2><span class="point">👆</span> להרשמה לוובינר הקרוב בחינם</h2>
+        <div class="webinar-date">יום ראשון | 28/06/26 | בשעה 19:00</div>
+        <form action="#" method="post" onsubmit="event.preventDefault(); alert('תודה! נרשמת בהצלחה לוובינר.'); this.reset();">
+          <input class="pill-input" type="text" name="name" required autocomplete="name" placeholder="איך קוראים לך?" aria-label="שם מלא" />
+          <input class="pill-input" type="tel" name="phone" required autocomplete="tel" placeholder="מה המספר שלך?" aria-label="טלפון" />
+          <input class="pill-input" type="email" name="email" required autocomplete="email" placeholder="מה המייל שלך?" aria-label="אימייל" />
+          <label class="form-checkbox">
+            <span>אני מאשר/ת שקראתי ואני מסכים/ה <a href="#" onclick="event.preventDefault();">לתקנון האתר</a> וכן לקבל תזכורות לגבי הוובינר ותוכן שיווקי בוואטסאפ ובמייל</span>
+            <input type="checkbox" required />
+          </label>
+          <button type="submit" class="submit-btn">שריין מקום בהדרכה בחינם</button>
+          <div class="capacity-note"><span class="icon">!</span><span>מס׳ המקומות מוגבל ל-250 אנשים</span></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== STORY BLOCK (דור) ====== -->
+  <section class="sec story-block">
+    <div class="container">
+      <div class="story-wrap">
+        <div class="story-text">
+          <h2 class="story-title">אם עדיין לא הכרנו,<br>נעים מאוד אני דור</h2>
+          <p>אחרי 12 שנים בעולמות הנדל"ן ומעל 1500 עסקאות מוצלחות, אני יכול לומר בפה מלא שהעסקה הראשונה שתעשה היא החשובה והמרגשת ביותר בדרך להגדלת ההון שלך.</p>
+          <p>לא משנה כמה עסקאות ביצעתי עבורי ועבור הלקוחות שלי, אני עד היום זוכר איזו הרגשה מדהימה הייתה לי לאחר העסקה הראשונה שלי שבה עשיתי 100% על ההשקעה שלי בשנתיים, בלי לעבוד כמו "משוגע" ובלי שגוזרים אותי במיסים.</p>
+          <p>היום התשוקה שלי היא להראות לצעירים שנמצאים באותו מקום שאני הייתי אז, איך לבצע את העסקה הכי משמעותית וחשובה עבורם בדרך חכמה וללא לשלם עשרות אלפי שקלים למתווכים או מלווי משקיעים.</p>
+          <p class="story-closing">דור</p>
+        </div>
+        <div class="story-photo">
+          <div class="story-photo-circle"><img src="images/dor.jpg" alt="דור כהן" loading="lazy" decoding="async" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== OBJECTIONS ====== -->
+  <section class="sec objection-block">
+    <div class="container">
+      <h2 class="sec-title">לצעירים בישראל יש הזדמנות מטורפת להגדיל את ההון שלהם באמצעות נדל"ן</h2>
+      <p class="obj-intro">ראיתי מאות פעמים צעירים שמגדילים את ההון שלהם משמעותית בזמן קצר<strong>וזה יעבוד לך גם — אתה בטוח ש...</strong></p>
+      <div class="myth-grid">
+        <div class="myth-card">
+          <div class="myth-badge">?</div>
+          <p>נדל"ן זה תחום מורכב וקשה לאתר עסקאות שבאמת ירוויחו לך</p>
+        </div>
+        <div class="myth-card">
+          <div class="myth-badge">?</div>
+          <p>אין לך הון עצמי ענק של מאות אלפי שקלים</p>
+        </div>
+        <div class="myth-card">
+          <div class="myth-badge">?</div>
+          <p>אתה חסר מושג לגבי עולם הנדל"ן וכרגע אתה לא יודע כלום. <strong>אז זהו שאתה לא צריך כלום מהדברים האלה!</strong></p>
+        </div>
+      </div>
+      <p class="obj-outro">היום כל צעיר יכול לעשות את עסקת הנדל"ן הראשונה שלו בצורה בטוחה ונכונה בכוחות עצמו</p>
+      <p class="obj-warn">אבל זה לא מתאים לכל אחד...</p>
+    </div>
+  </section>
+
+  <!-- ====== FILTER ====== -->
+  <section class="sec filter-block">
+    <div class="container">
+      <h2 class="sec-title">למי מתאים להגיע למשדר?</h2>
+      <p class="filter-intro"><span class="lead">בוא נתחיל עם מי שהוויבנר לא מתאים לו</span></p>
+      <div class="filter-grid">
+        <div class="filter-col no">
+          <div class="filter-col-head">אם אתה אחד מאלה, בבקשה אל תגיע להדרכה:</div>
+          <div class="filter-card">
+            <ul class="filter-list">
+              <li><span class="ic">✕</span><span>מחפש התעשרות מהירה ללא השקעה</span></li>
+              <li><span class="ic">✕</span><span>אין לך הון עצמי של 150,000 ש"ח לפחות</span></li>
+              <li><span class="ic">✕</span><span>חסר סבלנות ורצון ללמוד את התחום</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="filter-col yes">
+          <div class="filter-col-head">אבל! אם אתה אחד מאלה, אסור לך לפספס את הוובינר:</div>
+          <div class="filter-card">
+            <ul class="filter-list">
+              <li><span class="ic">✓</span><span>רוצה להגדיל את ההון העצמי שלך בצורה הכי בטוחה שיש</span></li>
+              <li><span class="ic">✓</span><span>מתעניין בעולם הנדל"ן ויודע שיש לו פוטנציאל אדיר!</span></li>
+              <li><span class="ic">✓</span><span>מעוניין לבצע את עסקת הנדל"ן הראשונה שלך בביטחון וברוגע</span></li>
+              <li><span class="ic">✓</span><span>רוצה להיפטר ממלווי משקיעים ומתווכים ולחסוך עשרות אלפים</span></li>
+              <li><span class="ic">✓</span><span>מעוניין לדעת איך עושים עסקה בצורה נכונה - ממי שביצע מעל 1,500 עסקאות</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="filter-cta">
+        <a href="#form" class="cta-btn lime">שריין מקום בוובינר בחינם ›</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FAQ ====== -->
+  <section class="sec faq-block">
+    <div class="container">
+      <h2 class="sec-title">שאלות נפוצות</h2>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-q">אין לי מושג היום בנדל"ן, האם הוובינר רלוונטי עבורי?<span class="chev">+</span></div><div class="faq-a">בוודאי. הוובינר נועד לצעירים בלי מושג בעולם הנדל"ן שרוצים להגדיל את ההון שלהם, כך שהכל יהיה מוסבר בשפה פשוטה ובלי מושגים מורכבים.</div></div>
+        <div class="faq-item"><div class="faq-q">מה ההון העצמי הדרוש כדי להשקיע בנדל"ן בישראל?<span class="chev">+</span></div><div class="faq-a">בערך 150 אלף ש"ח — זה מספיק כדי להתחיל להשקיע בנדל"ן בארץ.</div></div>
+        <div class="faq-item"><div class="faq-q">שאלה שלישית נפוצה?<span class="chev">+</span></div><div class="faq-a">תשובה מפורטת לשאלה השלישית. לעריכה.</div></div>
+        <div class="faq-item"><div class="faq-q">שאלה רביעית נפוצה?<span class="chev">+</span></div><div class="faq-a">תשובה מפורטת לשאלה הרביעית. לעריכה.</div></div>
+        <div class="faq-item"><div class="faq-q">שאלה חמישית נפוצה?<span class="chev">+</span></div><div class="faq-a">תשובה מפורטת לשאלה החמישית. לעריכה.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FAQ CLOSING CTA (dark band) ====== -->
+  <section class="faq-cta">
+    <div class="container">
+      <p>אם יש לך כל שאלה שלא נמצאת כאן<br>סיכוי גדול שנענה עליה בוובינר הקרוב</p>
+      <a href="#form" class="cta-btn lime">שריין מקום לוובינר בחינם <span class="circ">←</span></a>
+    </div>
+  </section>
+
+  <!-- ====== FINAL CLOSING + FORM ====== -->
+  <section class="final-close" id="form3">
+    <div class="container">
+      <h2 class="final-close-title">שמע, אם הגעת עד לפה</h2>
+      <p class="final-close-text">כנראה אתה אוהב לגלול, אז אין פה עוד כפתור ואין לי כל כך עוד מה להוסיף לך כרגע אבל אני יודע שעניינתי אותך ואתה רוצה לדעת עוד אז יאללה</p>
+      <p class="final-close-bold">אין כפתור, תגלול עוד טיפה ותשריין לך מקום בחינם</p>
+      <div class="signup-card">
+        <h2><span class="point">👆</span> להרשמה לוובינר הקרוב בחינם</h2>
+        <div class="webinar-date">יום ראשון | 28/06/26 | בשעה 19:00</div>
+        <form action="#" method="post" onsubmit="event.preventDefault(); alert('תודה! נרשמת בהצלחה לוובינר.'); this.reset();">
+          <input class="pill-input" type="text" name="name" required autocomplete="name" placeholder="איך קוראים לך?" aria-label="שם מלא" />
+          <input class="pill-input" type="tel" name="phone" required autocomplete="tel" placeholder="מה המספר שלך?" aria-label="טלפון" />
+          <input class="pill-input" type="email" name="email" required autocomplete="email" placeholder="מה המייל שלך?" aria-label="אימייל" />
+          <label class="form-checkbox">
+            <span>אני מאשר/ת שקראתי ואני מסכים/ה <a href="#" onclick="event.preventDefault();">לתקנון האתר</a> וכן לקבל תזכורות לגבי הוובינר ותוכן שיווקי בוואטסאפ ובמייל</span>
+            <input type="checkbox" required />
+          </label>
+          <button type="submit" class="submit-btn">שריין מקום בהדרכה בחינם</button>
+          <div class="capacity-note"><span class="icon">!</span><span>מס׳ המקומות מוגבל ל-250 אנשים</span></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <div class="container">
+      <div>© שם המותג — כל הזכויות שמורות</div>
+      <div style="margin-top:6px;"><a href="#">תקנון</a> · <a href="#">הצהרת נגישות</a></div>
+    </div>
+  </footer>
+
+  <!-- ====== STICKY CTA ====== -->
+  <div class="sticky-cta">
+    <button type="button" id="open-modal"><span class="gift">🎁</span><span>הירשמו עכשיו בחינם</span></button>
+  </div>
+
+  <!-- ====== MODAL ====== -->
+  <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button class="modal-close" id="close-modal" type="button" aria-label="סגור">×</button>
+      <h2 id="modal-title">הרשמה לוובינר החינמי</h2>
+      <p class="modal-sub">מלאו את הפרטים ושמרו את מקומכם</p>
+      <form id="modal-form" action="#" method="post" onsubmit="event.preventDefault(); alert('תודה! נרשמת בהצלחה לוובינר.'); this.reset(); document.getElementById('modal').classList.remove('open');">
+        <div class="form-row"><input class="pill-input" type="text" name="name" required autocomplete="name" placeholder="איך קוראים לך?" aria-label="שם מלא" /></div>
+        <div class="form-row"><input class="pill-input" type="tel" name="phone" required autocomplete="tel" placeholder="מה המספר שלך?" aria-label="טלפון" /></div>
+        <div class="form-row"><input class="pill-input" type="email" name="email" required autocomplete="email" placeholder="מה המייל שלך?" aria-label="אימייל" /></div>
+        <label class="form-checkbox"><span>אני מאשר/ת שקראתי ואני מסכים/ה <a href="#" onclick="event.preventDefault();">לתקנון האתר</a> וכן לקבל תזכורות ותוכן שיווקי בוואטסאפ ובמייל</span><input type="checkbox" required /></label>
+        <button type="submit" class="submit-btn">שריין מקום בהדרכה בחינם</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ====== EDIT TOOLBAR ====== -->
+  <div id="edit-toolbar">
+    <button id="edit-toggle" type="button">✏️ ערוך טקסט</button>
+    <button id="recover-btn" type="button">🔁 שחזר טקסטים</button>
+    <button id="spacing-btn" type="button">📐 רווחים</button>
+    <button id="visibility-btn" type="button">👁️ סקציות</button>
+    <button id="save-btn" type="button">💾 שמור והורד</button>
+    <button id="reset-btn" type="button">↺ אפס שינויים</button>
+  </div>
+  <div id="spacing-panel"></div>
+  <div id="visibility-panel"></div>
+  <div id="autosave-indicator">השינויים נשמרו אוטומטית בדפדפן</div>
+
+  <script>
+    /* ====== COUNTDOWN (targets the webinar date: 28/06/2026 19:00) ====== */
+    (function () {
+      var target = new Date(2026, 5, 28, 19, 0, 0).getTime();
+      function pad(n) { return n < 10 ? '0' + n : '' + n; }
+      function tick() {
+        var diff = Math.max(0, target - Date.now());
+        var d = Math.floor(diff / 86400000);
+        var h = Math.floor((diff % 86400000) / 3600000);
+        var m = Math.floor((diff % 3600000) / 60000);
+        var s = Math.floor((diff % 60000) / 1000);
+        var set = function (k, v) { var el = document.querySelector('[data-cd="' + k + '"]'); if (el) el.textContent = pad(v); };
+        set('days', d); set('hours', h); set('minutes', m); set('seconds', s);
+      }
+      tick(); setInterval(tick, 1000);
+    })();
+
+    /* ====== FAQ ACCORDION ====== */
+    document.querySelectorAll('.faq-q').forEach(function (q) {
+      q.addEventListener('click', function () {
+        if (document.body.classList.contains('editing')) return;
+        q.parentElement.classList.toggle('open');
+      });
+    });
+
+    /* ====== TEXT EDITOR ====== */
+    const STORAGE_KEY = 'webinar_landing_text_edits_v1';
+    const EDITABLE_SELECTORS = [
+      '.logo-text', '.hero-eyebrow', '.hero h1', '.hero .sub',
+      '.webinar-date', '.signup-card h2', '.capacity-note span:not(.icon)',
+      '.stat-num', '.stat-label',
+      '.submit-btn', '.form-checkbox span',
+      '.sec-title', '.sec-sub',
+      '.value-card h3', '.value-card p',
+      '.story-title', '.story-text p', '.story-closing',
+      '.tcard-name', '.tcard-row .lbl', '.tcard-row .val', '.tcard-quote',
+      '.obj-intro', '.myth-card p', '.obj-outro', '.obj-warn',
+      '.filter-intro', '.filter-col-head', '.filter-list li > span:last-child',
+      '.faq-q', '.faq-a',
+      '.faq-cta p', '.final-close-title', '.final-close-text', '.final-close-bold', '.cta-btn',
+      'footer .container div',
+      '.sticky-cta button span:last-child',
+      '.modal-card h2', '.modal-card .modal-sub'
+    ];
+
+    /* Stable ids scoped to the containing section, so reordering sections never re-maps saved edits. */
+    function tagEditables() {
+      const counters = {};
+      EDITABLE_SELECTORS.forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => {
+          if (el.dataset.editId) return;
+          const host = el.closest('section, footer, .logo-bar, .sticky-cta, .modal-card');
+          let secKey = 'root';
+          if (host) {
+            secKey = host.id || host.className.trim().split(/\s+/).filter(c => c !== 'sec').join('_') || host.tagName.toLowerCase();
+          }
+          const base = secKey + '__' + sel.replace(/[^a-z0-9]/gi, '');
+          counters[base] = counters[base] || 0;
+          el.dataset.editId = base + '_' + (counters[base]++);
+        });
+      });
+    }
+    tagEditables();
+
+    function loadSavedEdits() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        const saved = JSON.parse(raw);
+        let count = 0;
+        Object.entries(saved).forEach(([id, html]) => {
+          const el = document.querySelector(`[data-edit-id="${id}"]`);
+          if (el) { el.innerHTML = html; count++; }
+        });
+        if (count > 0) {
+          const ind = document.getElementById('autosave-indicator');
+          ind.textContent = `${count} שינויים נטענו · לחץ "ערוך טקסט" כדי להמשיך`;
+          ind.classList.add('show');
+          setTimeout(() => ind.classList.remove('show'), 4000);
+        }
+      } catch (e) { console.warn('load edits failed', e); }
+    }
+    loadSavedEdits();
+
+    /* Highlight "בכוחות עצמם" in the hero headline (gold, no animation) — runs after edits load. */
+    (function highlightHeroPhrase() {
+      const h1 = document.querySelector('.hero h1');
+      if (!h1 || h1.querySelector('.hl-pulse')) return;
+      const phrases = ['בכוחות עצמם', 'בכוחות עצמך', 'בכוחות עצמכם', 'בכוחות עצמנו'];
+      for (const p of phrases) {
+        if (h1.innerHTML.indexOf(p) !== -1) {
+          h1.innerHTML = h1.innerHTML.replace(p, '<span class="hl-pulse">' + p + '</span>');
+          break;
+        }
+      }
+    })();
+
+    let saveTimer;
+    function autoSave() {
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(() => {
+        const edits = {};
+        document.querySelectorAll('[data-edit-id]').forEach(el => { edits[el.dataset.editId] = el.innerHTML; });
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(edits));
+        const ind = document.getElementById('autosave-indicator');
+        ind.textContent = '✓ נשמר בדפדפן';
+        ind.classList.add('show');
+        clearTimeout(autoSave._t);
+        autoSave._t = setTimeout(() => ind.classList.remove('show'), 1500);
+      }, 400);
+    }
+
+    function setEditable(on) {
+      EDITABLE_SELECTORS.forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => {
+          if (el.tagName === 'INPUT') return;
+          if (on) {
+            el.setAttribute('contenteditable', 'true');
+            if (!el._bound) { el.addEventListener('input', autoSave); el._bound = true; }
+          } else { el.removeAttribute('contenteditable'); }
+        });
+      });
+    }
+
+    function toggleEditMode() {
+      const editing = document.body.classList.toggle('editing');
+      setEditable(editing);
+      document.getElementById('edit-toggle').textContent = editing ? '✓ סיים עריכה' : '✏️ ערוך טקסט';
+      if (editing && !sessionStorage.getItem('wl_hint')) {
+        alert('מצב עריכה פעיל! ✏️\n\n• לחץ על כל טקסט בדף — הוא הופך לעריך\n• השינויים נשמרים אוטומטית בדפדפן תוך כדי הקלדה\n• רענון הדף לא ימחק את השינויים\n• "💾 שמור והורד" — מוריד קובץ עם השינויים\n• "↺ אפס" — חוזר למקור');
+        sessionStorage.setItem('wl_hint', '1');
+      }
+    }
+
+    function saveAsHTML() {
+      const clone = document.documentElement.cloneNode(true);
+      ['#edit-toolbar', '#spacing-panel', '#visibility-panel', '#autosave-indicator'].forEach(sel => {
+        const el = clone.querySelector(sel); if (el) el.remove();
+      });
+      clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+      clone.querySelectorAll('[data-edit-id]').forEach(el => el.removeAttribute('data-edit-id'));
+      const body = clone.querySelector('body'); if (body) body.classList.remove('editing');
+      const html = '<!DOCTYPE html>\n' + clone.outerHTML;
+      const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'index.html';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1500);
+      alert('הקובץ הורד! 📥\nהחלף את index.html בקובץ החדש לפני פרסום.');
+    }
+
+    document.getElementById('edit-toggle').addEventListener('click', toggleEditMode);
+    document.getElementById('save-btn').addEventListener('click', saveAsHTML);
+
+    /* ====== RECOVER PREVIOUS EDITS ====== */
+    document.getElementById('recover-btn').addEventListener('click', () => {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      let saved = null;
+      if (raw) { try { saved = JSON.parse(raw); } catch (e) {} }
+      const items = saved ? Object.values(saved).map(v => {
+        const t = document.createElement('div'); t.innerHTML = v; return (t.textContent || '').trim();
+      }).filter(t => t.length > 1) : [];
+      const ov = document.createElement('div');
+      ov.style.cssText = 'position:fixed;inset:0;z-index:10000;background:rgba(26,36,33,.8);display:flex;align-items:center;justify-content:center;padding:24px;direction:rtl;';
+      const box = document.createElement('div');
+      box.style.cssText = 'background:#fff;border-radius:16px;max-width:560px;width:100%;max-height:80vh;overflow:auto;padding:24px;box-shadow:0 30px 80px rgba(0,0,0,.5);';
+      if (items.length) {
+        box.innerHTML = '<h3 style="margin-bottom:6px;color:#1A2421;font-size:18px;">🔁 הטקסטים ששמרת בדפדפן (' + items.length + ')</h3>' +
+          '<p style="color:#6f7269;font-size:13px;margin-bottom:14px;">העתק את הרשימה (כבר הועתקה ללוח אוטומטית).</p>' +
+          '<textarea readonly style="width:100%;height:300px;font-family:inherit;font-size:14px;padding:12px;border:1px solid #e6e2d6;border-radius:10px;direction:rtl;">' +
+          items.map((t, i) => (i + 1) + '. ' + t).join('\n') + '</textarea>';
+        if (navigator.clipboard) navigator.clipboard.writeText(items.map((t, i) => (i + 1) + '. ' + t).join('\n')).catch(() => {});
+      } else {
+        box.innerHTML = '<h3 style="margin-bottom:10px;color:#1A2421;font-size:18px;">לא נמצאו טקסטים שמורים</h3><p style="color:#6f7269;font-size:14px;">כתוב לי מה היו הטקסטים ששינית ואחזיר אותם לקוד.</p>';
+      }
+      const close = document.createElement('button');
+      close.textContent = 'סגור';
+      close.style.cssText = 'margin-top:14px;background:#1A2421;color:#C69C4A;border:none;padding:10px 22px;border-radius:10px;font-family:inherit;font-weight:700;cursor:pointer;';
+      close.onclick = () => ov.remove();
+      box.appendChild(close); ov.appendChild(box);
+      ov.addEventListener('click', e => { if (e.target === ov) ov.remove(); });
+      document.body.appendChild(ov);
+    });
+
+    /* ====== SPACING (separate top / bottom) + VISIBILITY ====== */
+    const SPACING_KEY = STORAGE_KEY + '_spacing';
+    const VISIBILITY_KEY = STORAGE_KEY + '_visibility';
+    const SECTIONS = [
+      { selector: '.hero', label: '🎬 כותרת ראשית' },
+      { selector: '.timer-block', label: '⏱️ טיימר' },
+      { selector: '.signup-block', label: '📝 טופס ראשי' },
+      { selector: '.stats-block', label: '📊 נתונים' },
+      { selector: '.value-block', label: '✓ מה תגלו' },
+      { selector: '.proof-block', label: '💬 עדויות' },
+      { selector: '.signup-cta-block', label: '📝 טופס (חזרה)' },
+      { selector: '.story-block', label: '👤 סיפור אישי' },
+      { selector: '.objection-block', label: '⚖️ התנגדויות' },
+      { selector: '.filter-block', label: '🎯 התאמה' },
+      { selector: '.faq-block', label: '❓ שאלות נפוצות' },
+      { selector: '.faq-cta', label: '🚀 CTA אחרי שאלות' },
+      { selector: '.final-close', label: '✍️ סגירה + טופס' },
+      { selector: 'footer', label: '📋 פוטר' }
+    ];
+    function getPad(sel, side) {
+      const el = document.querySelector(sel);
+      if (!el) return 0;
+      return parseInt(getComputedStyle(el)['padding' + side], 10) || 0;
+    }
+    function buildSpacingPanel() {
+      const panel = document.getElementById('spacing-panel');
+      const saved = JSON.parse(localStorage.getItem(SPACING_KEY) || '{}');
+      panel.innerHTML = '<h3>📐 מרווחים — למעלה / למטה</h3>';
+      SECTIONS.forEach(s => {
+        const sv = (saved[s.selector] && typeof saved[s.selector] === 'object') ? saved[s.selector] : {};
+        const curT = sv.t !== undefined ? sv.t : getPad(s.selector, 'Top');
+        const curB = sv.b !== undefined ? sv.b : getPad(s.selector, 'Bottom');
+        const ctrl = document.createElement('div');
+        ctrl.className = 'spacing-control'; ctrl.dataset.section = s.selector;
+        ctrl.innerHTML =
+          `<div class="spacing-control-title">${s.label}</div>` +
+          `<div class="spacing-control-label"><span>⬆ למעלה</span><span class="val val-t">${curT}px</span></div>` +
+          `<input type="range" class="rng-t" min="0" max="240" value="${curT}" />` +
+          `<div class="spacing-control-label" style="margin-top:8px;"><span>⬇ למטה</span><span class="val val-b">${curB}px</span></div>` +
+          `<input type="range" class="rng-b" min="0" max="240" value="${curB}" />`;
+        panel.appendChild(ctrl);
+        const rngT = ctrl.querySelector('.rng-t'), rngB = ctrl.querySelector('.rng-b');
+        const valT = ctrl.querySelector('.val-t'), valB = ctrl.querySelector('.val-b');
+        rngT.addEventListener('input', () => { valT.textContent = rngT.value + 'px'; applySide(s.selector, 'Top', rngT.value); saveSpacing(); });
+        rngB.addEventListener('input', () => { valB.textContent = rngB.value + 'px'; applySide(s.selector, 'Bottom', rngB.value); saveSpacing(); });
+      });
+    }
+    function applySide(sel, side, v) { document.querySelectorAll(sel).forEach(el => { el.style['padding' + side] = v + 'px'; }); }
+    function loadSpacing() {
+      try {
+        const s = JSON.parse(localStorage.getItem(SPACING_KEY) || '{}');
+        Object.entries(s).forEach(([sel, val]) => {
+          if (val && typeof val === 'object') {
+            if (val.t !== undefined) applySide(sel, 'Top', val.t);
+            if (val.b !== undefined) applySide(sel, 'Bottom', val.b);
+          }
+        });
+      } catch (e) {}
+    }
+    function saveSpacing() {
+      const o = {};
+      document.querySelectorAll('.spacing-control').forEach(c => {
+        o[c.dataset.section] = { t: c.querySelector('.rng-t').value, b: c.querySelector('.rng-b').value };
+      });
+      localStorage.setItem(SPACING_KEY, JSON.stringify(o));
+    }
+    document.getElementById('spacing-btn').addEventListener('click', () => {
+      const btn = document.getElementById('spacing-btn'), panel = document.getElementById('spacing-panel');
+      if (!panel.classList.contains('open') && panel.children.length === 0) buildSpacingPanel();
+      document.getElementById('visibility-panel').classList.remove('open');
+      const vb = document.getElementById('visibility-btn'); vb.classList.remove('active'); vb.textContent = '👁️ סקציות';
+      panel.classList.toggle('open'); btn.classList.toggle('active');
+      btn.textContent = panel.classList.contains('open') ? '✓ סיים רווחים' : '📐 רווחים';
+    });
+
+    function buildVisibilityPanel() {
+      const panel = document.getElementById('visibility-panel');
+      const saved = JSON.parse(localStorage.getItem(VISIBILITY_KEY) || '{}');
+      panel.innerHTML = '<h3>👁️ הצג / הסתר סקציות</h3>';
+      SECTIONS.forEach(s => {
+        const visible = saved[s.selector] !== false;
+        const row = document.createElement('div');
+        row.className = 'visibility-row' + (visible ? '' : ' off');
+        row.innerHTML = `<span>${s.label}</span><button type="button" class="vis-toggle ${visible ? 'on' : ''}" data-section="${s.selector}"></button>`;
+        panel.appendChild(row);
+        const t = row.querySelector('.vis-toggle');
+        t.addEventListener('click', () => { const on = t.classList.toggle('on'); row.classList.toggle('off', !on); applyVisibility(s.selector, on); saveVisibility(); });
+      });
+    }
+    function applyVisibility(sel, v) { document.querySelectorAll(sel).forEach(el => { if (v) el.style.removeProperty('display'); else el.style.display = 'none'; }); }
+    function loadVisibility() { try { const s = JSON.parse(localStorage.getItem(VISIBILITY_KEY) || '{}'); Object.entries(s).forEach(([k, v]) => { if (v === false) applyVisibility(k, false); }); } catch (e) {} }
+    function saveVisibility() { const o = {}; document.querySelectorAll('#visibility-panel .vis-toggle').forEach(t => { o[t.dataset.section] = t.classList.contains('on'); }); localStorage.setItem(VISIBILITY_KEY, JSON.stringify(o)); }
+    document.getElementById('visibility-btn').addEventListener('click', () => {
+      const btn = document.getElementById('visibility-btn'), panel = document.getElementById('visibility-panel');
+      if (!panel.classList.contains('open') && panel.children.length === 0) buildVisibilityPanel();
+      document.getElementById('spacing-panel').classList.remove('open');
+      const sb = document.getElementById('spacing-btn'); sb.classList.remove('active'); sb.textContent = '📐 רווחים';
+      panel.classList.toggle('open'); btn.classList.toggle('active');
+      btn.textContent = panel.classList.contains('open') ? '✓ סיים סקציות' : '👁️ סקציות';
+    });
+
+    loadSpacing(); loadVisibility();
+
+    document.getElementById('reset-btn').addEventListener('click', () => {
+      if (!confirm('לאפס את כל השינויים (טקסט + רווחים + סקציות) ולחזור למקור?')) return;
+      localStorage.removeItem(STORAGE_KEY); localStorage.removeItem(SPACING_KEY); localStorage.removeItem(VISIBILITY_KEY);
+      location.reload();
+    });
+
+    document.querySelectorAll('form').forEach(f => f.addEventListener('submit', (e) => {
+      if (document.body.classList.contains('editing')) { e.preventDefault(); alert('מצב עריכה פעיל — סיים עריכה לפני שליחת הטופס.'); }
+    }));
+
+    /* ====== STICKY CTA + MODAL ====== */
+    const modal = document.getElementById('modal');
+    document.getElementById('open-modal').addEventListener('click', (e) => {
+      if (document.body.classList.contains('editing')) { e.preventDefault(); return; }
+      modal.classList.add('open');
+      setTimeout(() => modal.querySelector('input[name="name"]')?.focus(), 280);
+    });
+    document.getElementById('close-modal').addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('open')) modal.classList.remove('open'); });
+
+    /* Smooth scroll */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.length > 1) { const t = document.querySelector(href); if (t) { e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - 12, behavior: 'smooth' }); } }
+      });
+    });
+  </script>
+</body>
+</html>
