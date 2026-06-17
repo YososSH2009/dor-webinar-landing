@@ -1035,5 +1035,23 @@
       });
     });
   </script>
+  <!-- Lead capture -> Make webhook (registration automation) -->
+  <script>
+  (function () {
+    var WEBHOOK = 'https://hook.eu1.make.com/9xsg7412mzvu94pvs5vlr7g7zlslj6he';
+    document.addEventListener('submit', function (e) {
+      if (document.body.classList.contains('editing')) return; // don't send while editing
+      var form = e.target;
+      if (!form || form.tagName !== 'FORM') return;
+      var v = function (n) { var el = form.querySelector('[name="' + n + '"]'); return el ? el.value.trim() : ''; };
+      var data = { name: v('name'), phone: v('phone'), email: v('email'), page: document.title, ts: new Date().toISOString() };
+      if (!data.name && !data.phone && !data.email) return;
+      try {
+        fetch(WEBHOOK, { method: 'POST', mode: 'no-cors', keepalive: true,
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(data) });
+      } catch (err) {}
+    }, true); // capture phase -> runs before the form's redirect to thanks.html
+  })();
+  </script>
 </body>
 </html>
