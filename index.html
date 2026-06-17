@@ -1038,19 +1038,21 @@
   <!-- Lead capture -> Make webhook (registration automation) -->
   <script>
   (function () {
-    var WEBHOOK = 'https://hook.eu1.make.com/9xsg7412mzvu94pvs5vlr7g7zlslj6he';
+    var WEBHOOK = 'https://hook.eu1.make.com/t2abbruxd4x2f32gzqm7h0oow7p3lxsl';
     document.addEventListener('submit', function (e) {
-      if (document.body.classList.contains('editing')) return; // don't send while editing
+      if (document.body.classList.contains('editing')) return;
       var form = e.target;
       if (!form || form.tagName !== 'FORM') return;
+      e.preventDefault();
+      e.stopImmediatePropagation();
       var v = function (n) { var el = form.querySelector('[name="' + n + '"]'); return el ? el.value.trim() : ''; };
-      var data = { name: v('name'), phone: v('phone'), email: v('email'), page: document.title, ts: new Date().toISOString() };
-      if (!data.name && !data.phone && !data.email) return;
+      var data = { name: v('name'), phone: v('phone'), email: v('email'), page: document.title };
+      var go = function () { window.location.href = 'thanks.html'; };
       try {
-        fetch(WEBHOOK, { method: 'POST', mode: 'no-cors', keepalive: true,
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(data) });
-      } catch (err) {}
-    }, true); // capture phase -> runs before the form's redirect to thanks.html
+        fetch(WEBHOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) }).then(go, go);
+        setTimeout(go, 2500);
+      } catch (err) { go(); }
+    }, true);
   })();
   </script>
 </body>
