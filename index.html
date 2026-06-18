@@ -49,9 +49,10 @@
 
     /* ====== LOGO BAR ====== */
     .logo-bar { padding: 16px 0; text-align: center; background: var(--dark); }
-    .logo-bar .logo-text { display: inline-block; font-size: 24px; font-weight: 800; color: #fff; }
+    .logo-bar .logo-text { display: none; }
     .logo-bar .logo-text .dot { color: var(--lime); }
-    .logo-bar img { height: 48px; width: auto; display: none; }
+    .logo-bar img { height: 60px; width: auto; display: inline-block; border-radius: 50%; vertical-align: middle; }
+    @media (max-width: 480px) { .logo-bar img { height: 50px; } }
 
     /* ====== HERO ====== */
     .hero {
@@ -406,7 +407,7 @@
 
   <!-- ====== LOGO BAR ====== -->
   <div class="logo-bar" id="top">
-    <img src="logo.png" alt="שם המותג" />
+    <img src="images/logo.jpg" alt="דור כהן" />
     <span class="logo-text">שם<span class="dot"> המותג</span></span>
   </div>
 
