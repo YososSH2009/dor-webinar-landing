@@ -302,6 +302,13 @@
           if (n) { const i = document.getElementById('autosave-indicator'); i.textContent = n + ' שינויים נטענו · לחץ "ערוך טקסט"'; i.classList.add('show'); setTimeout(() => i.classList.remove('show'), 4000); }
         } catch (e) {}
       })();
+      /* Make the "(...)" part of the headline smaller + on its own line, regardless of manual edits */
+      (function styleHeadline() {
+        const h1 = document.querySelector('.t-hero h1');
+        if (!h1 || h1.querySelector('.t-h1-sub')) return;
+        const m = h1.innerHTML.match(/\([^)]*\)/);
+        if (m) h1.innerHTML = h1.innerHTML.replace(m[0], '<span class="t-h1-sub">' + m[0] + '</span>');
+      })();
       let t;
       function save() {
         clearTimeout(t); t = setTimeout(() => {
