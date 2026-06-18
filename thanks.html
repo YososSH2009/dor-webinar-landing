@@ -49,6 +49,7 @@
     .wa-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-size: clamp(17px, 2.2vw, 21px); font-weight: 800; color: #fff; background: var(--wa); padding: 18px 34px; border-radius: 14px; text-decoration: none; box-shadow: 0 14px 34px rgba(37,211,102,0.35); transition: transform .2s, box-shadow .2s; border: none; cursor: pointer; font-family: inherit; }
     .wa-btn:hover { transform: translateY(-2px); box-shadow: 0 18px 44px rgba(37,211,102,0.5); }
     .wa-btn svg { width: 26px; height: 26px; flex-shrink: 0; }
+    .wa-text { white-space: nowrap; }
 
     .t-date { margin-top: 22px; font-size: clamp(15px, 1.9vw, 18px); font-weight: 600; color: var(--gold); }
 
@@ -107,7 +108,8 @@
       .t-hero .t-sub { font-size: 15px; max-width: min(100%, 340px); }
       .countdown { gap: 14px; }
       .cd-box .num { font-size: 34px; }
-      .wa-btn { font-size: 17px; padding: 16px 24px; width: 100%; max-width: 360px; }
+      .wa-btn { font-size: 15px; padding: 15px 14px; gap: 8px; width: 100%; max-width: 100%; }
+      .wa-btn svg { width: 22px; height: 22px; }
     }
 
     /* ===== INLINE TEXT EDITOR ===== */
@@ -176,6 +178,13 @@
           <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 42V11a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v31"></path><path d="M26 42V21h9a2 2 0 0 1 2 2v19"></path><line x1="16" y1="16" x2="21" y2="16"></line><line x1="16" y1="23" x2="21" y2="23"></line><line x1="16" y1="30" x2="21" y2="30"></line><line x1="7" y1="42" x2="41" y2="42"></line></svg></div>
           <div><h3>למה דירה להשקעה היא "המסלול הבטוח"</h3><p>הדרך המדויקת להכפיל את ההון העצמי שלך באמצעות עסקת נדל"ן ראשונה.</p></div>
         </div>
+      </div>
+
+      <div style="text-align:center; margin-top:38px;">
+        <a href="#" class="wa-btn" id="wa-link-3">
+          <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3.2C8.93 3.2 3.2 8.93 3.2 16c0 2.26.6 4.46 1.73 6.4L3.2 28.8l6.56-1.72A12.74 12.74 0 0 0 16 28.8C23.07 28.8 28.8 23.07 28.8 16S23.07 3.2 16.001 3.2zm0 23.04c-2.02 0-4-.54-5.73-1.57l-.41-.24-3.89 1.02 1.04-3.79-.27-.43A10.2 10.2 0 0 1 5.76 16c0-5.65 4.6-10.24 10.24-10.24S26.24 10.35 26.24 16 21.65 26.24 16 26.24zm5.62-7.67c-.31-.16-1.82-.9-2.1-1-.28-.1-.49-.16-.7.16-.2.31-.8 1-.98 1.2-.18.2-.36.23-.67.08-.31-.16-1.3-.48-2.48-1.53-.92-.82-1.54-1.83-1.72-2.14-.18-.31-.02-.48.14-.63.14-.14.31-.36.47-.54.16-.18.2-.31.31-.52.1-.2.05-.39-.03-.54-.08-.16-.7-1.69-.96-2.31-.25-.6-.51-.52-.7-.53l-.6-.01c-.2 0-.54.08-.82.39-.28.31-1.08 1.05-1.08 2.57s1.1 2.98 1.26 3.18c.16.2 2.18 3.33 5.28 4.67.74.32 1.31.51 1.76.65.74.24 1.41.2 1.94.12.59-.09 1.82-.74 2.08-1.46.26-.72.26-1.34.18-1.46-.08-.13-.28-.2-.59-.36z"/></svg>
+          <span class="wa-text">להצטרפות לקבוצת הוואטסאפ</span>
+        </a>
       </div>
     </div>
   </section>
@@ -265,7 +274,7 @@
 
     /* WhatsApp group link — replace "#" with your real group invite link */
     var WHATSAPP_GROUP_URL = "#"; // e.g. "https://chat.whatsapp.com/XXXXXXXX"
-    ['wa-link', 'wa-link-2'].forEach(function (id) {
+    ['wa-link', 'wa-link-2', 'wa-link-3'].forEach(function (id) {
       var a = document.getElementById(id);
       if (a && WHATSAPP_GROUP_URL !== "#") a.href = WHATSAPP_GROUP_URL;
     });
