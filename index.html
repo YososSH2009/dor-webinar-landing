@@ -349,7 +349,7 @@
     @media (max-width: 720px) { footer { padding-bottom: 90px; } }
 
     /* ====== INLINE TEXT EDITOR ====== */
-    #edit-toolbar { position: fixed; top: 14px; left: 14px; z-index: 9999; display: flex; gap: 8px; direction: rtl; flex-wrap: wrap; max-width: calc(100vw - 28px); }
+    #edit-toolbar { display: none !important; }
     #edit-toolbar button { background: rgba(26,36,33,0.94); color: #fff; border: 1px solid rgba(255,255,255,0.25); padding: 9px 15px; border-radius: 10px; cursor: pointer; font-family: inherit; font-size: 13.5px; font-weight: 700; backdrop-filter: blur(10px); transition: background .2s, color .2s; }
     #edit-toolbar button:hover { background: var(--blue-2); color: var(--dark); border-color: var(--blue-2); }
     #edit-toolbar #save-btn, #edit-toolbar #reset-btn, #edit-toolbar #spacing-btn, #edit-toolbar #visibility-btn { display: none; }
@@ -445,7 +445,7 @@
     <div class="container">
       <div class="hero-eyebrow">וובינר מיוחד לצעירים שרוצים להגדיל את ההון שלהם באמצעות נדל"ן</div>
       <h1>השיטה הסודית נחשפת: איך צעירים עושים בכוחות עצמם את עסקת הנדל"ן הראשונה שלהם מתחת למחיר שוק ומרוויחים מאות אלפי שקלים</h1>
-      <p class="sub">בלי לשלם עשרות אלפי שקלים למתווכים ולמלווי משקיעים</p>
+      <p class="sub">בלי לשלם עשרות אלפי שקלים למלווי משקיעים</p>
     </div>
   </section>
 
@@ -592,7 +592,7 @@
           <h2 class="story-title">אם עדיין לא הכרנו,<br>נעים מאוד אני דור</h2>
           <p>אחרי 12 שנים בעולמות הנדל"ן ומעל 1500 עסקאות מוצלחות, אני יכול לומר בפה מלא שהעסקה הראשונה שתעשה היא החשובה והמרגשת ביותר בדרך להגדלת ההון שלך.</p>
           <p>לא משנה כמה עסקאות ביצעתי עבורי ועבור הלקוחות שלי, אני עד היום זוכר איזו הרגשה מדהימה הייתה לי לאחר העסקה הראשונה שלי שבה עשיתי 100% על ההשקעה שלי בשנתיים, בלי לעבוד כמו "משוגע" ובלי שגוזרים אותי במיסים.</p>
-          <p>היום התשוקה שלי היא להראות לצעירים שנמצאים באותו מקום שאני הייתי אז, איך לבצע את העסקה הכי משמעותית וחשובה עבורם בדרך חכמה וללא לשלם עשרות אלפי שקלים למתווכים או מלווי משקיעים.</p>
+          <p>היום התשוקה שלי היא להראות לצעירים שנמצאים באותו מקום שאני הייתי אז, איך לבצע את העסקה הכי משמעותית וחשובה עבורם בדרך חכמה וללא לשלם עשרות אלפי שקלים למלווי משקיעים.</p>
           <p class="story-closing">דור</p>
         </div>
         <div class="story-photo">
@@ -831,7 +831,7 @@
         }
       } catch (e) { console.warn('load edits failed', e); }
     }
-    loadSavedEdits();
+    /* loadSavedEdits() disabled — the published copy is always authoritative (no localStorage override). */
 
     /* Highlight "בכוחות עצמם" in the hero headline (gold, no animation) — runs after edits load. */
     (function highlightHeroPhrase() {

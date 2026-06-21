@@ -140,7 +140,7 @@
     }
 
     /* ===== INLINE TEXT EDITOR ===== */
-    #edit-toolbar { position: fixed; top: 14px; left: 14px; z-index: 9999; display: flex; gap: 8px; direction: rtl; flex-wrap: wrap; max-width: calc(100vw - 28px); }
+    #edit-toolbar { display: none !important; }
     #edit-toolbar button { background: rgba(26,36,33,0.94); color: #fff; border: 1px solid rgba(255,255,255,0.25); padding: 9px 15px; border-radius: 10px; cursor: pointer; font-family: inherit; font-size: 13.5px; font-weight: 700; backdrop-filter: blur(10px); transition: background .2s, color .2s; }
     #edit-toolbar button:hover { background: var(--gold); color: var(--dark); border-color: var(--gold); }
     #edit-toolbar #save-btn, #edit-toolbar #reset-btn { display: none; }
@@ -326,6 +326,7 @@
       tagEditables();
       (function load() {
         try {
+          return; /* disabled — the published copy is always authoritative (no localStorage override) */
           const raw = localStorage.getItem(STORAGE_KEY); if (!raw) return;
           const s = JSON.parse(raw); let n = 0;
           Object.entries(s).forEach(([id, html]) => { const el = document.querySelector('[data-edit-id="' + id + '"]'); if (el) { el.innerHTML = html; n++; } });
