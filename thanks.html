@@ -283,19 +283,35 @@
   <div id="autosave-indicator">השינויים נשמרו אוטומטית בדפדפן</div>
 
   <script>
-    /* Countdown to the webinar: 28/06/2026 19:00 */
+    /* ====== AUTO-ROLLING COUNTDOWN — יום ראשון 19:00, גלגול ב-20:00 כל שבועיים ====== */
     (function () {
-      var target = new Date(2026, 5, 28, 19, 0, 0).getTime();
+      var PERIOD = 14 * 24 * 60 * 60 * 1000;
+      var rollover0 = new Date(2026, 5, 28, 20, 0, 0).getTime();
       function pad(n) { return n < 10 ? '0' + n : '' + n; }
+      function computeTarget() {
+        var elapsed = Date.now() - rollover0;
+        var k = elapsed < 0 ? 0 : Math.floor(elapsed / PERIOD) + 1;
+        return new Date(2026, 5, 28 + k * 14, 19, 0, 0);
+      }
+      function fmtDate(dt) {
+        return '📅 יום ראשון | ' + pad(dt.getDate()) + '/' + pad(dt.getMonth() + 1) + '/' + pad(dt.getFullYear() % 100) + ' | בשעה 19:00';
+      }
+      var target = computeTarget();
+      function setDates() {
+        var s = fmtDate(target);
+        document.querySelectorAll('.t-date').forEach(function (el) { if (el.textContent !== s) el.textContent = s; });
+      }
       function tick() {
-        var diff = Math.max(0, target - Date.now());
+        var t = computeTarget();
+        if (t.getTime() !== target.getTime()) { target = t; setDates(); }
+        var diff = Math.max(0, target.getTime() - Date.now());
         var set = function (k, v) { var el = document.querySelector('[data-cd="' + k + '"]'); if (el) el.textContent = pad(v); };
         set('days', Math.floor(diff / 86400000));
         set('hours', Math.floor((diff % 86400000) / 3600000));
         set('minutes', Math.floor((diff % 3600000) / 60000));
         set('seconds', Math.floor((diff % 60000) / 1000));
       }
-      tick(); setInterval(tick, 1000);
+      setDates(); tick(); setInterval(tick, 1000);
     })();
 
     /* WhatsApp group link — replace "#" with your real group invite link */
